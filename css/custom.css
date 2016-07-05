@@ -1,0 +1,166 @@
+body {
+  font-family: Unica One, sans-serif;
+}
+
+.backstretch {
+  left: 0px; 
+  top: 0px; 
+  z-index: -999999; 
+  margin: 0px; 
+  padding: 0px;
+  position: fixed; 
+  overflow: hidden; 
+  height: 100%; 
+  width: 100%;
+}
+
+#backstretch {
+  background: url(../images/earth.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-solid {
+  
+  border-radius: 20px;
+  opacity: 1;
+  height: 450px;
+  width: 300px;
+  z-index: 100;
+  position:absolute;
+  top:40%;
+  left:86%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+
+#teal {
+  position: absolute;
+  background-color: #a5adb0;
+  opacity: .2;
+  width: 150px;
+  z-index: 91;
+  position:absolute;
+  top:0%;
+  left:92.25%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+#teal1 {
+  position: absolute;
+  background-color: black;
+  opacity: .05;
+  width: 150px;
+  z-index: 92;
+  position:absolute;
+  top:0%;
+  left:92.25%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.login {
+  text-align: right;
+  color: #eaeaea;
+  font-weight: 100px;
+  font-size: 58px;
+  line-height: 90%;
+}
+
+.links {
+  text-align: right;
+  /*color: #00b3b3;*/
+  color: #009999;
+  /*color: teal;*/
+  font-weight: 100px;
+  font-size: 34px;
+  line-height: 120%;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+ 
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+ 
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay:1s;
+  animation-delay: 1s;
+}
+  
+.fade-in2 {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+ 
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+ 
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay:1.5s;
+  animation-delay: 1.5s;
+}
+  
+.fade-in3 {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+ 
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+ 
+  -webkit-animation-duration:1.5s;
+  -moz-animation-duration:1.5s;
+  animation-duration:1.5s;
+
+  -webkit-animation-delay: 2.25s;
+  -moz-animation-delay:2.25s;
+  animation-delay: 2.25s;
+}
+  
+.fade-in4 {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+ 
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+ 
+  -webkit-animation-duration:1.5s;
+  -moz-animation-duration:1.5s;
+  animation-duration:1.5s;
+
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay:3s;
+  animation-delay: 3s;
+}
+ 
