@@ -1,22 +1,24 @@
 $(document).ready(function(){ 
 
-	 // $( "div#teal" ).slideDown( "slow", function() {
-  // });
+	$("div#bar1").animate({ "height": "300%" }, 3000 );
+	$("div#bar2").animate({ "height": "300%" }, 2800 );
 
-	// $( "div#teal" ).animate({
- //  		opacity: .4,
- //  		height: "150%"
-	// 	}, {
- //  	step: function( now, fx ) {
- //    var data = fx.elem.id + " " + fx.prop + ": " + now;
- //    // $( "body" ).append( "<div>" + data + "</div>" );
-	//   }
-	// });
+$(".touch").hover(function () {
+    $(this).toggleClass('animated pulse');
+});
 
-$("div#teal").animate({ "height": "300%" }, 3000 );
-$("div#teal1").animate({ "height": "300%" }, 2800 );
-// $("div#teal2").animate({ "height": "300%" }, 5000 );
-// $("div#teal3").animate({ "height": "300%" }, 3800 );
+$('div#about').animateCss('fadeInUpBig');
+
+
+
+	// $(".links").hover(
+ //        function(){
+ //             timer = setTimeout(function(){ $('.links').addClass('bounce'); }, 200);
+ //        }, function(){
+ //           clearTimeout(timer);
+ //           $('.links').removeClass('bounce');
+ //        }
+ //    );
 
 });
 
