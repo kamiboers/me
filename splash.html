@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Kami Boers, Web Developer</title>
-	<link rel="stylesheet" type="text/css" href="css/custom.css">  
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="./css/custom.css">  
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
 	<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+	<link href="./css/featherlight.min.css" type="text/css" rel="stylesheet" />
 </head>
+
 <body>
 
-	<div id="backstretch" class="backstretch">
+	<div id="splash-background" class="backstretch">
 
-		<div class="login-blur slideInDown" id="teal"></div>
-		<div class="login-blur slideInDown" id="teal1"></div>
-		<div class="login-blur slideInDown" id="teal2"></div>
-		<div class="login-blur slideInDown" id="teal3"></div>
-		<div class="login-solid">
-			<div class="login animated fade-in">
+		<div class="sidebar" id="bar1"></div>
+		<div class="sidebar" id="bar2"></div>
+
+		<div class="bar-opaque">
+			<div class="bar-title animated fade-in" id="fade-in1">
 				<span class="name">Kami<br>Boers</span>
 			</div>
-			<div class="links animated fade-in2">
-				About.
+			<div class="links animated fade-in" id="fade-in2">
+				<a href="#" class="touch" data-featherlight="#about">About.</a>
 			</div>
-			<div class="links animated fade-in3">
-				Code.
+			<div class="links animated fade-in" id="fade-in3">
+				<a href="#" class="touch" data-featherlight="#code">Code.</a>
 			</div>
-			<div class="links animated fade-in4">
-				Contact.
+			<div class="links animated fade-in" id="fade-in4">
+				<a href="#" class="touch" data-featherlight="#contact">Contact.</a>
 			</div>
 		</div>
 
+		<div id="about" class="hidden lightdiv animated fadeInUpBig">About div will be opened in a lightbox</div>
+		<div id="code" class="hidden">Code div will be opened in a lightbox</div>
+		<div id="contact" class="hidden">Contact div will be opened in a lightbox</div>
 
 	</div>
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="./js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="js/page.js"></script>
 </body>
+
 </html>
