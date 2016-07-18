@@ -1,10 +1,10 @@
-$(document).ready(function(){ 
 $('.lightdiv').hide();
+$(document).ready(function(){ 
 
 	$("div#bar1").animate({ "height": "300%" }, 3000 );
 	$("div#bar2").animate({ "height": "300%" }, 2800 );
 
-$(".touch").hover(function () {
+$("a.touch").hover(function () {
     $(this).toggleClass('animated pulse');
 });
 
