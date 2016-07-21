@@ -42,7 +42,7 @@ a:hover {
 
 #sidebar {
   float: right;
-  color: white;
+  color: #EAEAEA;
   text-align: right;
   width: 200px;
   height: 100%;
@@ -71,4 +71,20 @@ a:hover {
 .links {
   font-size: 50px;
   line-height: 150%;
+}
+
+.bar-title {
+  text-align: right;
+  color: #EAEAEA;
+  font-size: 58px;
+  line-height: 90%;
+}
+
+.links > a {
+  float: right;
+  text-decoration: none;
+  color: #009999;
+  font-size: 42px;
+  line-height: 120%;
+  margin-top: 10px;
 }
