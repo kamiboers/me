@@ -32,7 +32,7 @@ a:hover {
   width: 100%;
   z-index: 0;
   position: fixed; 
-  z-index: -900;
+  /*z-index: -900;*/
 }
 
 @keyframes slide-down {
@@ -58,12 +58,12 @@ a:hover {
 }
 
 #sidebar {
-  float: right;
+  float: left;
   color: #EAEAEA;
   text-align: right;
   width: 200px;
   height: 100%;
-  margin-right: 8%;
+  margin-left: 80%;
   opacity: 1;
   z-index: 101;
 }
@@ -127,78 +127,10 @@ a:hover {
 }
 
 div.panel {
-  display: none;
   height: 100%;
   width: 80%;
   z-index: 999999;
   background-color: #201f2a;
   color: #eaeaea;
   font-size: 30px;
-}
-
-/* animate.css */
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInUpBig {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 2000px, 0);
-    transform: translate3d(0, 2000px, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInUpBig {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 2000px, 0);
-    transform: translate3d(0, 2000px, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-.fadeInUpBig {
-  -webkit-animation-name: fadeInUpBig;
-  animation-name: fadeInUpBig;
-}
-
-@keyframes fadeOutDownBig {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 2000px, 0);
-    transform: translate3d(0, 2000px, 0);
-  }
-}
-
-.fadeOutDownBig {
-  -webkit-animation-name: fadeOutDownBig;
-  animation-name: fadeOutDownBig;
-}
-
-@-webkit-keyframes fadeOutLeft {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
 }
