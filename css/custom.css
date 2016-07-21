@@ -127,6 +127,7 @@ a:hover {
 }
 
 div.panel {
+  display: block;
   height: 100%;
   width: 80%;
   z-index: 999999;
