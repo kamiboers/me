@@ -32,7 +32,6 @@ a:hover {
   width: 100%;
   z-index: 0;
   position: fixed; 
-  /*z-index: -900;*/
 }
 
 @keyframes slide-down {
@@ -127,6 +126,8 @@ a:hover {
 }
 
 div.panel {
+  font-family: Unica One, sans-serif;
+  position: fixed;
   display: block;
   height: 100%;
   width: 80%;
@@ -134,4 +135,5 @@ div.panel {
   background-color: #201f2a;
   color: #eaeaea;
   font-size: 30px;
+  align-content: left;
 }
