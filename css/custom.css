@@ -8,7 +8,10 @@ a, a:visited {
 }
 
 a:hover {
-  color: #11a98c;
+  text-decoration: none;
+  animation-name: link-hov;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .backstretch {
@@ -32,7 +35,6 @@ a:hover {
   z-index: -900;
 }
 
-
 @keyframes slide-down {
     from {height: 0%;
           opacity: .1;
@@ -45,6 +47,14 @@ a:hover {
 @keyframes fade-in {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+@keyframes link-hov {
+    from {  color: #1E9E9E;
+    }
+    to {    color: #32B2B2;
+            font-size: 102%;
+    }
 }
 
 #sidebar {
@@ -86,7 +96,7 @@ a:hover {
   opacity: 0;
   animation-name: fade-in;
   animation-delay: 2.05s;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
 
@@ -94,15 +104,16 @@ a:hover {
   opacity: 0;
   animation-name: fade-in;
   animation-delay: 2.55s;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
 
 #contact {
   opacity: 0;
   animation-name: fade-in;
+  animation-timing-function: ease-in;
   animation-delay: 3.05s;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
@@ -110,18 +121,77 @@ a:hover {
   float: right;
   text-decoration: none;
   color: #009999;
-  font-size: 40px;
   line-height: 120%;
-  margin: 10px 15px;
+  font-size: 40px;
+  margin: 15px 15px;
 }
 
 div.panel {
-  display: none;
+  opacity: 0;
   height: 100%;
   width: 80%;
   z-index: 999999;
   background-color: #201f2a;
   color: #eaeaea;
-  /*display: block;*/
   font-size: 30px;
+}
+
+/* animate.css */
+
+@-webkit-keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+
+@keyframes fadeOutDownBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+.fadeOutDownBig {
+  -webkit-animation-name: fadeOutDownBig;
+  animation-name: fadeOutDownBig;
+}
+
+@-webkit-keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }
