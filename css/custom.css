@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Unica One';
+  src: url('../fonts/unicaone.eof');
+  src: local('UnicaOne'), local('UnicaOne'), url('../fonts/unicaone.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensanslight.ttf');
+  src: local('OpenSans'), local('OpenSans'), url('../fonts/opensanslight.ttf') format('truetype');
+}
+
 body {
   font-family: Unica One, sans-serif;
 }
@@ -7,9 +19,15 @@ a, a:visited {
   color: #1E9E9E;
 }
 
-a:hover {
+a.side:hover {
   text-decoration: none;
   animation-name: link-hov;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.inline-link:hover {
+  animation-name: inlin-hov;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
@@ -53,6 +71,15 @@ a:hover {
     }
     to {    color: #32B2B2;
             font-size: 102%;
+            font-weight: 500;
+    }
+}
+
+@keyframes inlin-hov {
+    from {  color: #1E9E9E;
+    }
+    to {    color: green;
+            font-weight: 500;
     }
 }
 
@@ -131,9 +158,32 @@ div.panel {
   display: block;
   height: 100%;
   width: 80%;
-  z-index: 999999;
+  z-index: 100000;
   background-color: #201f2a;
   color: #eaeaea;
-  font-size: 30px;
+  font-size: 28px;
   align-content: left;
+  font-weight: 200px;
+}
+
+div.inner-panel {
+  padding: 60px;
+  /*text-align: justify;*/
+  line-height: 110%;
+}
+
+.headshot {
+  width: 200px;
+  display: inline-block;
+  float: left;
+  border-radius: 15px;
+  opacity: 1;
+  z-index: 999999;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+span.panel-body {
+  margin-top: 100px;
+  font-family: 'Open Sans', sans-serif;
 }
