@@ -164,12 +164,22 @@ div.panel {
   font-size: 28px;
   align-content: left;
   font-weight: 200px;
+  overflow-y: scroll;
+}
+
+div.title {
+  font-size: 40px;
+  margin: 10px;
 }
 
 div.inner-panel {
   padding: 60px;
   /*text-align: justify;*/
   line-height: 110%;
+}
+
+div.panel-center {
+  text-align: center;
 }
 
 .headshot {
@@ -186,4 +196,15 @@ div.inner-panel {
 span.panel-body {
   margin-top: 100px;
   font-family: 'Open Sans', sans-serif;
+}
+
+.project {
+  display: block;
+  margin: 25px 25px;
+  opacity: .75;
+  height: 300px;
+}
+
+.project:hover {
+  opacity: 1;
 }
