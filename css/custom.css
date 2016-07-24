@@ -254,8 +254,8 @@ span.skillz-header {
 
 .project-card {
   display: inline-block;
-  width: 25%;
-  height: 700px%;
+  width: 28%;
+  height: 700px;
   padding: 10px;
   margin: 15px;
   vertical-align: top;
@@ -298,5 +298,21 @@ img#gh-link {
 .icon-link {
   align-content: center;
   text-align: center;
+}
+
+.spaced-link {
+  width: 25%;
+  display: inline-block;
+  opacity: .8;
+}
+
+.spaced-link:hover {
+  opacity: 1;
+}
+
+#about-links {
+  margin-top: 50px;
   margin-bottom: 25px;
+  text-align: center;
+  align-content: center;
 }
