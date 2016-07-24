@@ -17,7 +17,7 @@ $('.links').delegate('a', 'click', function() {
 
   $("#fitbeat").hover(
       function() {
-          $(this).attr("src", "images/fitbeat.gif");
+          $(this).attr("src", "images/fitbeatdemo.gif");
       },
       function() {
           $(this).attr("src", "images/fitbeatstatic.png");
