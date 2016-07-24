@@ -20,35 +20,103 @@
 				<div id='code'><a href="#" class='side'>code.</a></div>
 				<div id='contact'><a href="#" class='side'>contact.</a></div>
 			</div>
-			<div id="sb-trans"></div>
+			<div id="sidebar-transparent"></div>
 		</div>
 	</div>
 
 	<div class="panel animated" id="about-panel">
 	<div class="inner-panel">
+	<div class="inner-panel-sidebar">
 		<img src="images/head2.png" class="headshot">
-		<span class='panel-body'> I am a recent graduate of <span class="inline-link"><a target="_blank" href="https://www.turing.io">Turing School of Software and Design</a></span> in Denver, Colorado. Turing's intensive, seven-month program certifies full stack developers with experience stretching from Ruby to Rails to HTML, CSS and JavaScript and beyond. </span>
+		
+		<div class="skillz-box">
+			<span class="skillz-header">skills:</span>
+			<ul>
+				<li>Ruby</li>
+				<li>Rails</li>
+				<li>JavaScript</li>
+				<li>jQuery</li>
+				<li>AJAX</li>
+				<li>ActiveRecord</li>
+				<li>PostgreSQL</li>
+				<li>Sinatra</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>GitHub</li>
+				<li>MiniTest</li>
+				<li>RSpec</li>
+				<li>Capybara</li>
+				<li>TDD</li>
+			</ul>
+		</div>
+
+	</div>
+	<div class="inner-panel-text">
+		<span class='panel-body'> 
+		<p class='about-paragraph'>
+		I am a recent graduate of <span class="inline-link"><a target="_blank" href="https://www.turing.io">Turing School of Software and Design</a></span> in Denver, Colorado. Turing's intensive program certifies full stack web developers with experience stretching from Ruby to Rails to HTML, CSS and JavaScript and beyond. 
+		</p>
+		<p class='about-paragraph'>
+		As a software developer, I approach problems with thoughtful analysis and good humor. I enjoy the challenge and open-ended problem solving that software engineering represents. I am a methodical, persistent debugger who will doggedly chase solutions. I balance a passion for logic with a love of design. and am always looking for ways to improve, streamline and develop the systems in which I am working.
+		</p>
+		<p class='about-paragraph'>
+		I am also a traveler, poker enthusiast, rock climber, lover of languages, dog wrangler, and general enthusiast of life.  With a background in veterinary care and extensive customer service experience, I have a knack for quick, flexible and amicable problem solving, and thrive in a team environment. I hope to develop a career characterized by continual learning, collaboration and sharing of knowledge with others.
+		</p>
+		</span>
 	</div>
 	</div>
+	</div>
+
 	<div class="panel animated" id="code-panel">
 		<div class="inner-panel panel-center">
 		<div class='title'>projects.<br><br>
+		</div>
+		
+		<div class='project-box'>
+		<div class='project-card'>
+		<span class='project-header'>FitBeat</span>
+		<img src="images/fitbeatstatic.png" id="fitbeat" alt="FitBeat" class="project">
+		<div class="project-body">
+		A fitness music app consuming Fitbit and Spotify APIs. FitBeat pulls in daily heart rate data, displays it on a dashboard and allows the user to create and populate Spotify playlists whose BPM falls within the ranges of Fitbit's exercise heart rate categories. This project uses Ruby on Rails, OAuth2 authorization, jQuery, RSpec, and VCR to test API interaction.</div>
+		<span class="project-links">
+		<br><a href="https://github.com/kamiboers/fitbeat">View on GitHub <img src="images/github-icon.png" width="20px"></a><br><a href="https://ftbt.herokuapp.com/">View Production (Demo)</a></span>
+		</div>
+		
+		<div class='project-card'>
+		<span class='project-header'>Q*Bert</span>
+		<img src="images/qbertstatic.png" id="qbert" alt="Q*Bert" class="project">
+		<div class="project-body">
+		Classic arcade game replicated in client-side JavaScript during a ten day, three-person collaboration. Game tracks local high scores using local storage. Q*Bert also incorporates jQuery, CSS, and unit testing with Minitest, Mocha, and Chai. </div>
+		<span class="project-links">
+		<br><a href="https://github.com/kamiboers/qbert">View on GitHub <img src="images/github-icon.png" width="20px"></a><br><a href="https://qbert.rocks">View in Production</a></span>
+		</div>
+
+		<div class='project-card'>
+		<span class='project-header'>IdeaBox</span>
+		<img src="images/ideaboxstatic.png" id="ideabox" alt="IdeaBox" class="project">
+		<div class="project-body">
+		Single-Page application to store and rate 'ideas'. Uses Rails to manage and serve data, and JavaScript and jQuery for client-side interactions. All CRUD functionality is initiated using jQuery AJAX calls to the Rails server. Ideas can be edited inline, filtered by tags, and searched dynamically without page reload. jQuery is responsible for all DOM manipulation.</div>
+		<span class="project-links">
+		<br><a href="https://github.com/kamiboers/ideabox">View on GitHub <img src="images/github-icon.png" width="20px"></a><br><a href="https://ideaboite.herokuapp.com/">View in Production</a></span>
+		</div>
+		</div>
+
+	</div>
+	<div class="icon-link">
 		<a href="http://www.github.com/kamiboers">
-			<img src="images/githubmark.png" height='50' alt="go to github">
+			<img src="images/github-icon.png" id="gh-link" alt="go to github">
 		</a>
 		</div>
-		<img src="images/qbertstatic.png" id="qbert" alt="Q*Bert" class="project">
-		<img src="images/ideaboxstatic.png" id="ideabox" alt="IdeaBox" class="project">
-		<img src="images/fitbeatstatic.png" id="fitbeat" alt="FitBeat" class="project">
 	</div>
-	</div>
+	
 	<div class="panel animated" id="contact-panel">
 		<div class="inner-panel panel-center">
-		<div class='title'>get in touch.</div>
+		<div class='title'>get in touch.</div><br>
+		<span class="panel-body2">
 		<a href="mailto:kamiboers@gmail.com" class="touch">
 			kamiboers@gmail.com
 		</a>
-		<br>303.726.5267<br>
+		<br>303.726.5267<br></span>
 	</div>
 	</div>
 

@@ -9,7 +9,7 @@ $('.links').delegate('a', 'click', function() {
 
   $("#qbert").hover(
       function() {
-          $(this).attr("src", "images/qbertrox.gif");
+          $(this).attr("src", "images/qbertdemo.gif");
       },
       function() {
           $(this).attr("src", "images/qbertstatic.png");
@@ -25,7 +25,7 @@ $('.links').delegate('a', 'click', function() {
 
   $("#ideabox").hover(
       function() {
-          $(this).attr("src", "images/ideabox.gif");
+          $(this).attr("src", "images/ideaboxdemo.gif");
       },
       function() {
           $(this).attr("src", "images/ideaboxstatic.png");
