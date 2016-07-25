@@ -25,14 +25,7 @@ a.side:hover {
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-/*
-.inline-link > a {
-  color: teal;
-}
 
-.inline-link:hover {
-  color: red;
-}*/
 
 .backstretch {
   background: url(../images/earth.jpeg) no-repeat center center fixed; 
@@ -157,7 +150,6 @@ a.side:hover {
 div.panel {
   font-family: Unica One, sans-serif;
   position: fixed;
-  display: block;
   height: 100%;
   width: 80%;
   z-index: 100000;
@@ -166,6 +158,7 @@ div.panel {
   font-size: 28px;
   font-weight: 200;
   overflow-y: scroll;
+  display: none;
 }
 
 div.title {
