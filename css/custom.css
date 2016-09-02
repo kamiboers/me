@@ -247,7 +247,7 @@ span.skillz-header {
 
 .project-card {
   display: inline-block;
-  width: 28%;
+  width: 25%;
   height: 700px;
   padding: 10px;
   margin: 15px;
@@ -308,4 +308,51 @@ img#gh-link {
   margin-bottom: 25px;
   text-align: center;
   align-content: center;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: .95;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: .95;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUpBig {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: .95;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
