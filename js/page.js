@@ -1,33 +1,18 @@
 $(document).ready(function(){ 
-$('.panel').hide();
+  $('.panel').hide();
 
+  $('.links').delegate('a', 'click', function() {
+    // $("div#" + this.parentElement.id).load(this.parentElement.id + ".html");
+    $('div#' + this.parentElement.id + '-panel').fadeToggle().toggleClass('fadeInUpBig');
+    $('.panel').not('#' + this.parentElement.id + '-panel').fadeOut('slow').removeClass('fadeInUpBig');
+  });
 
-$('.links').delegate('a', 'click', function() {
-  $('div#' + this.parentElement.id + '-panel').fadeToggle().toggleClass('fadeInUpBig');
-  $('.panel').not('#' + this.parentElement.id + '-panel').fadeOut('fast').removeClass('fadeInUpBig');
-});
+  $(".project").hover(
+    function() {
+      $(this).attr("src", "images/" + this.id + "demo.gif");
+    },
+    function() {
+      $(this).attr("src", "images/" + this.id + "static.png");
+  });
 
-  $("#qbert").hover(
-      function() {
-          $(this).attr("src", "images/qbertdemo.gif");
-      },
-      function() {
-          $(this).attr("src", "images/qbertstatic.png");
-  });       
-
-  $("#fitbeat").hover(
-      function() {
-          $(this).attr("src", "images/fitbeatdemo.gif");
-      },
-      function() {
-          $(this).attr("src", "images/fitbeatstatic.png");
-  });      
-
-  $("#ideabox").hover(
-      function() {
-          $(this).attr("src", "images/ideaboxdemo.gif");
-      },
-      function() {
-          $(this).attr("src", "images/ideaboxstatic.png");
-  });                  
 });
