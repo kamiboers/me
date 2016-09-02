@@ -95,6 +95,7 @@ a.side:hover {
   top: -500px;
   background-color: #eaeaea;
   width: 100%;
+  /* add these on stylesheet load */
   animation-name: slide-down;
   animation-delay:0.25s;
   animation-duration: 5s;

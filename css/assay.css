@@ -1,0 +1,44 @@
+
+/* default content to center page */
+
+.centered {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 250px;
+  background-color: #ccc;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 28px;
+  padding-top: 25px;
+}
+
+#styling {
+  margin-top: 15px;
+}
+
+#backstretch-layer {
+  position: absolute;
+  background: transparent;
+  opacity: .65;
+  height: 100%; 
+  width: 100%;
+  z-index: -1000;
+  object-fit: contain;
+}
+
+.backstretch {
+  position: fixed; 
+  overflow: hidden; 
+  height: 100%; 
+  width: 100%;
+  z-index: -999999;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
