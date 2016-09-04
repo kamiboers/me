@@ -1,3 +1,4 @@
+
 var panels = ['about','code', 'contact']
 
 for (var i in panels) {
@@ -8,6 +9,7 @@ $(document).ready(function(){
 
     $('.sidebar-link').click(function() {
       $('#panel-' + this.id).fadeToggle().addClass('slideUp');
+      $('.panel').css("background-color", "#13171A;");
       $('.panel-content').not('#panel-' + this.id ).fadeOut().removeClass('slideUp');
     });
 
