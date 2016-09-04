@@ -1,21 +1,31 @@
-$(document).ready(function(){ 
-  $('.panel').hide();
- 
-   $("div#about-panel").load("./partials/about.html");
-   $("div#code-panel").load("./partials/code.html");
-   $("div#contact-panel").load("./partials/contact.html");
+// $('.sidebar-content').load("./partials/sidebar.html")
 
-  $('.links').delegate('a', 'click', function() {
-    $('div#' + this.parentElement.id + '-panel').fadeToggle().toggleClass('fadeInUpBig');
-    $('.panel').not('#' + this.parentElement.id + '-panel').fadeOut('slow').removeClass('fadeInUpBig');
-  });
+$(document).ready(function(){
 
-  $(".project").hover(
-    function() {
-      $(this).attr("src", "images/" + this.id + "demo.gif");
-    },
-    function() {
-      $(this).attr("src", "images/" + this.id + "static.png");
+  $('.sidebar-link').click( function() {
+    console.log('link clicked');
+    if ($('#panel-content').is(':empty')) {      
+      console.log('panel was empty');
+      $('#panel-content').load("./partials/" + this.id + ".html");
+      $('#panel-content').addClass('slideUp');
+
+    } else {
+        console.log('panel was not empty');
+        $('#panel-content').removeClass('slideUp').addClass('slideDown');
+        debugger;
+        if ($('#panel-content:first-child').id === this.id + "-inner-panel") {
+          console.log('closing panel');
+          
+      } else {
+        console.log('switching panel)');
+        $('#panel-content').load("./partials/" + this.id + ".html");
+        $('#panel-content').delay(500).addClass('slideUp');
+      }
+    }
+    
+    // $('#panel-content').delay(500).removeClass('slideDown').addClass('slideUp')
+
+    // $('.panel').not('#' + this.parentElement.id + '-panel').fadeOut('slow').removeClass('fadeInUpBig');
   });
 
 });
