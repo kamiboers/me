@@ -1,27 +1,40 @@
-/*@font-face {
+@font-face {
   font-family: 'Unica One';
   src: url('../fonts/unicaone.eof');
   src: local('UnicaOne'), local('UnicaOne'), url('../fonts/unicaone.ttf') format('truetype');
 }
 
-*/
 @font-face {
   font-family: 'Open Sans';
   src: url('../fonts/opensanslight.ttf');
   src: local('OpenSans'), local('OpenSans'), url('../fonts/opensanslight.ttf') format('truetype');
 }
+
+a, a:visited, a:focus {
+  text-decoration: none;
+  color: #1E9E9E;
+}
+
 body {
   font-family: 'OpenSans', sans-serif;
+  color: #EAEAEA;
 }
-.panel-inner {
-  
-}
-.panel-content {
-  display: none;
+
+.backstretch {
+  background: url(../images/earth.jpeg) no-repeat center center fixed; 
+  position: fixed; 
+  overflow: hidden; 
+  height: 100%; 
+  width: 100%;
+  z-index: -999999;
+  -webkit-background-size: cover;
+  /*-moz-background-size: cover;*/
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .inner-body {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
 }
@@ -30,29 +43,103 @@ body {
   height: 100%;
   width: 80%;
   float: left;
+  overflow-x: hidden;
   overflow-y: scroll;
-  background-color: lightgray;
+
+}
+
+.panel-content {
+  height: 100%;
+  display: none;
+  background-color: #13171A;
+  opacity: 0.95;
+  padding: 25px;
+
+}
+
+.panel-title {
+  font-size: 48px;
+  font-family: 'Unica One', sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .sidebar {
   height: 100%;
   width: 20%;
   float: left;
-  background-color: lightblue;
+}
+
+.sidebar-title {
+  font-size: 175%;
+  line-height: 70%;
+  margin-bottom: 25px;
+}
+
+.sidebar-link:hover {
+  animation-name: link-hover-grow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .sidebar-content {
   height: 100%;
   width: 65%;
   text-align: right;
+  font-family: 'Unica One', sans-serif;
+  font-size: 36px;
+  padding: 25px 5px;
+  line-height: 125%;
 }
+
+
+
+/* about panel content */
+
+.headshot {
+  width: 25%;
+  border-radius: 15px;
+  float: left;
+}
+
+.skillz-box {
+  width: 30%;
+  float: left;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+/* code panel content */
+
+/* contact panel content */
+
+#panel-inner-contact {
+  text-align: center;
+  line-height: 150%;
+  font-size: 30px;
+  font-family: 'Unica One', sans-serif;
+}
+
+.email:hover > a {
+  animation-name: link-hover-grow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.about-links {
+  margin-top: 100px;
+}
+
+.icon {
+  margin: 100px 10px 0px 10px;
+  width: 40px;
+  object-fit: contain;
+}
+
+/* animations */
   
 .slideUp {
   animation-name: slideUp;
-  animation-duration: 1s;
-}  
-.slideDown {
-  animation-name: slideDown;
   animation-duration: 1s;
 }
 
@@ -65,6 +152,7 @@ body {
     opacity: .95;
   }
 }
+
 @-moz-keyframes slideUp {
     from {
     transform:translateY(100%);
@@ -73,8 +161,8 @@ body {
     transform:translateY(0px);
     opacity: .95;
   }
-
 }
+
 @-o-keyframes slideUp {
     from {
     transform:translateY(100%);
@@ -84,6 +172,7 @@ body {
     opacity: .95;
   }
 }
+
 @keyframes slideUp {
     from {
     transform:translateY(100%);
@@ -94,39 +183,34 @@ body {
   }
 }
 
-@-webkit-keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: .95;
-  } to {
-    transform:translateY(0px);
-    opacity: 0;
-  }
+@-webkit-keyframes link-hover-grow {
+    from {  color: #1E9E9E;
+    } to {    color: #32B2B2;
+            font-size: 102%;
+            font-weight: 500;
+    }
 }
-@-moz-keyframes slideDown {
-    from {
-    transform:translateY(-100%);
-    opacity: .95;
-  } to {
-    transform:translateY(0px);
-    opacity: 0;
-  }
+
+@-moz-keyframes link-hover-grow {
+    from {  color: #1E9E9E;
+    } to {    color: #32B2B2;
+            font-size: 102%;
+            font-weight: 500;
+    }
 }
-@-o-keyframes slideDown {
-    from {
-    transform:translateY(-100%);
-    opacity: .95;
-  } to {
-    transform:translateY(0px);
-    opacity: 0;
-  }
+
+@-o-keyframes link-hover-grow {
+    from {  color: #1E9E9E;
+    } to {    color: #32B2B2;
+            font-size: 102%;
+            font-weight: 500;
+    }
 }
-@keyframes slideDown {
-    from {
-    transform:translateY(-100%);
-    opacity: .95;
-  } to {
-    transform:translateY(0px);
-    opacity: 0;
-  }
+
+@keyframes link-hover-grow {
+    from {  color: #1E9E9E;
+    } to {    color: #32B2B2;
+            font-size: 102%;
+            font-weight: 500;
+    }
 }
