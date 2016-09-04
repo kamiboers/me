@@ -13,7 +13,11 @@
 body {
   font-family: 'OpenSans', sans-serif;
 }
-#panel-content {
+.panel-inner {
+  
+}
+.panel-content {
+  display: none;
 }
 
 .inner-body {
