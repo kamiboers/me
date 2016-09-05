@@ -5,6 +5,12 @@
 }
 
 @font-face {
+  font-family: 'Lato-Light';
+  src: url('../fonts/Lato-Light.eof');
+  src: local('Lato-Light'), local('Lato-Light'), url('../fonts/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Open Sans';
   src: url('../fonts/opensanslight.ttf');
   src: local('OpenSans'), local('OpenSans'), url('../fonts/opensanslight.ttf') format('truetype');
@@ -20,7 +26,7 @@ a:hover {
 }
 
 body {
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'Lato-Light', sans-serif;
   color: #EAEAEA;
 }
 
@@ -45,7 +51,7 @@ body {
 
 .panel {
   height: 100%;
-  width: 75%;
+  width: 80%;
   float: left;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -62,7 +68,7 @@ body {
   min-height: 100%;
   height: auto;
   display: none;
-  background-color: #13171A;
+  background-color: #201f2a;
   opacity: 0.97;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -78,7 +84,7 @@ body {
 
 .sidebar {
   height: 100%;
-  width: 25%;
+  width: 20%;
   float: left;
 }
 
@@ -191,8 +197,6 @@ body {
 
 .about-paragraph {
   font-size: 24px;
-  font-weight: 100px;
-  font-family: 'Open Sans';
   margin: 20px 25px 10px 25px;
   line-height: 125%;
 }
@@ -233,7 +237,6 @@ body {
 }
 
 .project-description {
-  font-family: 'Open Sans';
   margin: 15px;
   font-size: 22px;
   font-weight: 100;
@@ -258,7 +261,7 @@ body {
   text-align: center;
   line-height: 150%;
   font-size: 30px;
-  font-family: 'Unica One', sans-serif;
+  font-family: 'Unica One';
 }
 
 .email:hover > a {
