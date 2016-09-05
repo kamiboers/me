@@ -15,6 +15,10 @@ a, a:visited, a:focus {
   color: #1E9E9E;
 }
 
+a:hover {
+  color: #32B2B2;
+}
+
 body {
   font-family: 'OpenSans', sans-serif;
   color: #EAEAEA;
@@ -45,12 +49,13 @@ body {
   float: left;
   overflow-x: hidden;
   overflow-y: scroll;
-  opacity: 0.95;
+  opacity: 0.97;
 }
 
 .panel-inner {
   height: 100%;
   width: 100%;
+  padding-top: 15px;
 }
 
 .panel-content {
@@ -58,17 +63,17 @@ body {
   height: auto;
   display: none;
   background-color: #13171A;
-  opacity: 0.95;
-  padding: 25px;
+  opacity: 0.97;
+  overflow-x: hidden;
   overflow-y: scroll;
+  padding: 20px;
 }
-
 
 .panel-title {
   font-size: 48px;
   font-family: 'Unica One', sans-serif;
   text-align: center;
-  margin-bottom: 25px;
+  margin: 25px auto;
 }
 
 .sidebar {
@@ -79,12 +84,12 @@ body {
 
 .sidebar-title {
   font-size: 175%;
-  line-height: 70%;
+  line-height: 80%;
   margin-bottom: 25px;
 }
 
 .sidebar-link:hover {
-  animation-name: link-hover-grow;
+  animation-name: text-hover-grow;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
@@ -94,28 +99,27 @@ body {
   width: 65%;
   text-align: right;
   font-family: 'Unica One', sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   padding: 25px 5px;
-  line-height: 125%;
+  line-height: 115%;
 }
-
 
 /* about panel content */
 
 .panel-narrow-column {
-  width: 30%;
+  width: 25%;
   float: left;
   padding: 15px;
 }
 
 .panel-wide-column {
-  width: 60%;
+  width: 65%;
   float: right;
   padding: 25px;
 }
 
 .headshot {
-  width: 100%;
+  width: 95%;
   border-radius: 15px;
   float: left;
   margin-bottom: 25px;
@@ -143,11 +147,64 @@ body {
   font-size: 24px;
   font-weight: 100px;
   font-family: 'Open Sans';
-  margin: 30px 25px;
+  margin: 20px 25px 10px 25px;
   line-height: 125%;
 }
 
 /* code panel content */
+
+#panel-inner-code {
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.project-box {
+  height: 100%;
+  margin-top: 25px;
+}
+
+.project-card {
+  position: relative;
+  width: 28%;
+  margin: 10px;
+  float: left;
+  padding: 10px;
+  display: block;
+}
+
+.project-title {
+  font-size: 38px;
+  font-family: 'Unica One';
+  margin-top: 10px;
+}
+
+.project-image {
+  display: block;
+  max-width: 95%;
+  max-height: 275px;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.project-description {
+  font-family: 'Open Sans';
+  margin: 15px;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 120%;
+}
+
+.project-links {
+  border: .5px solid gray;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.project-links > a {
+  font-size: 20px;
+  line-height: 120%;
+  color: #EAEAEA;
+}
 
 /* contact panel content */
 
@@ -159,20 +216,21 @@ body {
 }
 
 .email:hover > a {
-  animation-name: link-hover-grow;
+  animation-name: text-hover-grow;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 .links-below-content {
-  margin-top: 100px;
+  width: 100%;
+  float: left;
+  margin-top: 30px;
   text-align: center;
 }
 
 .icon {
   margin: 100px 10px 0px 10px;
   width: 40px;
-  object-fit: contain;
 }
 
 /* animations */
@@ -188,7 +246,7 @@ body {
     opacity: 0;
   } to {
     transform:translateY(0px);
-    opacity: .95;
+    opacity: .97;
   }
 }
 
@@ -198,7 +256,7 @@ body {
     opacity: 0;
   } to {
     transform:translateY(0px);
-    opacity: .95;
+    opacity: .97;
   }
 }
 
@@ -208,7 +266,7 @@ body {
     opacity: 0;
   } to {
     transform:translateY(0px);
-    opacity: .95;
+    opacity: .97;
   }
 }
 
@@ -218,11 +276,11 @@ body {
     opacity: 0;
   } to {
     transform:translateY(0px);
-    opacity: .95;
+    opacity: .97;
   }
 }
 
-@-webkit-keyframes link-hover-grow {
+@-webkit-keyframes text-hover-grow {
     from {  color: #1E9E9E;
     } to {    color: #32B2B2;
             font-size: 102%;
@@ -230,7 +288,7 @@ body {
     }
 }
 
-@-moz-keyframes link-hover-grow {
+@-moz-keyframes text-hover-grow {
     from {  color: #1E9E9E;
     } to {    color: #32B2B2;
             font-size: 102%;
@@ -238,7 +296,7 @@ body {
     }
 }
 
-@-o-keyframes link-hover-grow {
+@-o-keyframes text-hover-grow {
     from {  color: #1E9E9E;
     } to {    color: #32B2B2;
             font-size: 102%;
@@ -246,7 +304,7 @@ body {
     }
 }
 
-@keyframes link-hover-grow {
+@keyframes text-hover-grow {
     from {  color: #1E9E9E;
     } to {    color: #32B2B2;
             font-size: 102%;
