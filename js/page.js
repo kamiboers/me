@@ -1,21 +1,16 @@
-$(document).ready(function(){ 
-  $('.panel').hide();
- 
-   $("div#about-panel").load("./partials/about.html");
-   $("div#code-panel").load("./partials/code.html");
-   $("div#contact-panel").load("./partials/contact.html");
 
-  $('.links').delegate('a', 'click', function() {
-    $('div#' + this.parentElement.id + '-panel').fadeToggle().toggleClass('fadeInUpBig');
-    $('.panel').not('#' + this.parentElement.id + '-panel').fadeOut('slow').removeClass('fadeInUpBig');
-  });
+var panels = ['about','code', 'contact']
 
-  $(".project").hover(
-    function() {
-      $(this).attr("src", "images/" + this.id + "demo.gif");
-    },
-    function() {
-      $(this).attr("src", "images/" + this.id + "static.png");
-  });
+for (var i in panels) {
+  $('#panel-' + panels[i]).load('./partials/' + panels[i] + '.html');
+}
+
+$(document).ready(function(){
+
+    $('.sidebar-link').click(function() {
+      $('#panel-' + this.id).fadeToggle().addClass('slideUp');
+      $('.panel').css("background-color", "#13171A;");
+      $('.panel-content').not('#panel-' + this.id ).fadeOut().removeClass('slideUp');
+    });
 
 });
