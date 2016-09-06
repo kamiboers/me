@@ -30,58 +30,16 @@ body {
   color: #EAEAEA;
 }
 
+/* desktop styling */
+
 @media (min-width: 1100px) and (orientation: landscape) {
-
-.backstretch {
-  background: url(../images/earth.jpeg) no-repeat center center fixed; 
-  position: fixed; 
-  overflow: hidden; 
-  height: 100%; 
-  width: 100%;
-  z-index: -999999;
-  -webkit-background-size: cover;
-  /*-moz-background-size: cover;*/
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.inner-body {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-}
-
-.panel {
+  .panel {
   height: 100%;
   width: 80%;
   float: left;
   overflow-x: hidden;
   overflow-y: scroll;
   opacity: 0.97;
-}
-
-.panel-inner {
-  height: 100%;
-  width: 100%;
-  padding-top: 15px;
-}
-
-.panel-content {
-  min-height: 100%;
-  height: auto;
-  display: none;
-  background-color: #201f2a;
-  opacity: 0.97;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  padding: 20px;
-}
-
-.panel-title {
-  font-size: 48px;
-  font-family: 'Unica One', sans-serif;
-  text-align: center;
-  margin: 25px auto;
 }
 
 .sidebar {
@@ -115,6 +73,70 @@ body {
   animation-fill-mode: forwards;
 }
 
+.sidebar-content {
+  position: absolute;
+  height: 100%;
+  width: 150px;
+  text-align: right;
+  font-family: 'Unica One', sans-serif;
+  font-size: 40px;
+  padding: 20px 25px;
+  line-height: 115%;
+  z-index: 1000;
+}
+
+.panel {
+  height: 100%;
+  width: 80%;
+  float: left;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  opacity: 0.97;
+}
+
+.sidebar {
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+
+.sidebar-transparent{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -500px;
+  background-color: #eaeaea;
+  opacity: .1;
+  animation-name: slide-down;
+  animation-delay:0.25s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards; 
+  z-index: 500;
+}
+
+.sidebar-title {
+  opacity: 0;
+  font-size: 145%;
+  line-height: 80%;
+  margin-bottom: 25px;
+  animation-name: fade-in;
+  animation-delay: 1.55s;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+}
+
+.sidebar-content {
+  position: absolute;
+  height: 100%;
+  width: 150px;
+  text-align: right;
+  font-family: 'Unica One', sans-serif;
+  font-size: 40px;
+  padding: 20px 25px;
+  line-height: 115%;
+  z-index: 1000;
+}
+
 #about {
   opacity: 0;
   animation-name: fade-in;
@@ -140,25 +162,14 @@ body {
   animation-fill-mode: forwards;
 }
 
-.sidebar-link:hover {
-  animation-name: text-hover-grow;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+.links-below-content {
+  width: 100%;
+  float: left;
+  margin-top: 30px;
+  text-align: center;
 }
 
-.sidebar-content {
-  position: absolute;
-  height: 100%;
-  width: 150px;
-  text-align: right;
-  font-family: 'Unica One', sans-serif;
-  font-size: 40px;
-  padding: 20px 25px;
-  line-height: 115%;
-  z-index: 1000;
-}
-
-/* about panel content */
+/* about panel content - desktop */
 
 .panel-narrow-column {
   width: 25%;
@@ -179,12 +190,6 @@ body {
   margin-bottom: 25px;
 }
 
-.panel-sub-title {
-  margin-left: -15px;
-  font-size: 46px;
-  font-family: 'Unica One';
-}
-
 .skillz-box {
   width: 65%;
   float: left;
@@ -203,16 +208,11 @@ body {
   line-height: 125%;
 }
 
-/* code panel content */
+/* code panel content - desktop */
 
 #panel-inner-code {
   text-align: center;
   padding: 0px 40px;
-}
-
-.project-box {
-  height: 100%;
-  margin-top: 25px;
 }
 
 .project-card {
@@ -224,10 +224,18 @@ body {
   display: block;
 }
 
-.project-title {
-  font-size: 38px;
-  font-family: 'Unica One';
-  margin-top: 10px;
+.project-links {
+  border: .5px solid gray;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.project-description {
+  margin: 15px;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 120%;
 }
 
 .project-image {
@@ -238,17 +246,388 @@ body {
   margin: 10px auto;
 }
 
-.project-description {
-  margin: 15px;
+/* contact panel content - desktop */
+
+#panel-inner-contact {
+  text-align: center;
+  line-height: 150%;
+  font-size: 30px;
+  font-family: 'Unica One';
+}
+
+}
+
+
+/* intermediate styling */
+
+@media (min-width: 700px) and (max-width: 1099px) {
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 10%;
+  font-family: 'Unica One';
+  text-align: center;
+  overflow-x: scroll;
+  padding-top: 5px;
+}
+
+.sidebar-title {
+}
+
+.sidebar-content {
+  font-size: 310%;
+}
+
+.panel {
+  height: 95%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  opacity: 0.97;
+  margin-top: 8%;
+}
+
+.links-below-content {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* about panel content - intermediate */
+
+#panel-inner-about {
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.panel-narrow-column {
+  width: 90%;
+  float: left;
+  padding: 15px;
+}
+
+.panel-wide-column {
+  width: 90%;
+  float: left;
+  padding: 25px;
+}
+
+.headshot {
+  width: 55%;
+  border-radius: 500px;
+  display: block;
+  margin: 25px auto;
+}
+
+.skillz-box {
+  width: 55%;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 40px;
   font-size: 22px;
-  font-weight: 100;
-  line-height: 120%;
+  line-height: 140%;
+  overflow-x: scroll;
+  margin: 5px auto;
+  display: block;
+}
+
+.about-paragraph {
+  font-size: 24px;
+  margin: 20px 25px 10px 25px;
+  line-height: 125%;
+  text-align: justify;
+}
+
+/* code panel content - intermediate */
+
+#panel-inner-code {
+  text-align: center;
+  padding: 20px 40px;
+}
+
+#panel-code {
+  padding: 20px;
+}
+
+.project-card {
+  position: relative;
+  width: 90%;
+  margin: 10px 20px;
+  float: left;
+  padding: 10px;
+  display: block;
 }
 
 .project-links {
-  border: .5px solid gray;
+    width: 30%;
+    border: .5px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 160%;
+}
+
+.project-description {
+  width: 65%;
+  margin: 15px auto;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 120%;
+  text-align: justify;
+}
+
+.project-image {
+  display: block;
+  max-width: 95%;
+  max-height: 400px;
   border-radius: 5px;
+  margin: 10px auto;
+}
+
+#qbert-img {
+  max-height: 70%;
+  width: 70%;
+}
+
+/* contact panel content - intermediate */
+
+#panel-inner-contact {
+  text-align: center;
+  line-height: 150%;
+  font-size: 30px;
+  font-family: 'Unica One';
+  padding-top: 80px;
+}
+
+}
+/* mobile styling */
+
+@media (min-width: 700px) and (max-width: 1099px) {
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 10%;
+  font-family: 'Unica One';
+  text-align: center;
+  overflow-x: scroll;
+  padding-top: 5px;
+}
+
+.sidebar-title {
+}
+
+.sidebar-content {
+  font-size: 310%;
+}
+
+.panel {
+  height: 95%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  opacity: 0.97;
+  margin-top: 8%;
+}
+
+.links-below-content {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* about panel content - intermediate */
+
+#panel-inner-about {
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.panel-narrow-column {
+  width: 90%;
+  float: left;
   padding: 15px;
+}
+
+.panel-wide-column {
+  width: 90%;
+  float: left;
+  padding: 25px;
+}
+
+.headshot {
+  width: 55%;
+  border-radius: 500px;
+  display: block;
+  margin: 25px auto;
+}
+
+.skillz-box {
+  width: 55%;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 40px;
+  font-size: 22px;
+  line-height: 140%;
+  overflow-x: scroll;
+  margin: 5px auto;
+  display: block;
+}
+
+.about-paragraph {
+  font-size: 24px;
+  margin: 20px 25px 10px 25px;
+  line-height: 125%;
+  text-align: justify;
+}
+
+/* code panel content - intermediate */
+
+#panel-inner-code {
+  text-align: center;
+  padding: 20px 40px;
+}
+
+#panel-code {
+  padding: 20px;
+}
+
+.project-card {
+  position: relative;
+  width: 90%;
+  margin: 10px 20px;
+  float: left;
+  padding: 10px;
+  display: block;
+}
+
+.project-links {
+    width: 30%;
+    border: .5px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 160%;
+}
+
+.project-description {
+  width: 65%;
+  margin: 15px auto;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 120%;
+  text-align: justify;
+}
+
+.project-image {
+  display: block;
+  max-width: 95%;
+  max-height: 400px;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+#qbert-img {
+  max-height: 70%;
+  width: 70%;
+}
+
+/* contact panel content - intermediate */
+
+#panel-inner-contact {
+  text-align: center;
+  line-height: 150%;
+  font-size: 30px;
+  font-family: 'Unica One';
+  padding-top: 80px;
+}
+
+}
+
+
+
+
+
+.panel-title {
+  font-size: 48px;
+  font-family: 'Unica One', sans-serif;
+  text-align: center;
+  margin: 25px auto;
+}
+
+.backstretch {
+  background: url(../images/earth.jpeg) no-repeat center center fixed; 
+  position: fixed; 
+  overflow: hidden; 
+  height: 100%; 
+  width: 100%;
+  z-index: -999999;
+  -webkit-background-size: cover;
+  /*-moz-background-size: cover;*/
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.inner-body {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.panel-inner {
+  height: 100%;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.panel-content {
+  min-height: 100%;
+  height: auto;
+  display: none;
+  background-color: #201f2a;
+  opacity: 0.97;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.sidebar-link:hover {
+  animation-name: text-hover-grow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* about panel content */
+
+.panel-sub-title {
+  margin-left: -15px;
+  font-size: 46px;
+  font-family: 'Unica One';
+}
+
+/* code panel content */
+
+.project-box {
+  height: 100%;
+  margin-top: 25px;
+}
+
+
+.project-title {
+  font-size: 38px;
+  font-family: 'Unica One';
+  margin-top: 10px;
 }
 
 .project-links > a {
@@ -259,24 +638,10 @@ body {
 
 /* contact panel content */
 
-#panel-inner-contact {
-  text-align: center;
-  line-height: 150%;
-  font-size: 30px;
-  font-family: 'Unica One';
-}
-
 .email:hover > a {
   animation-name: text-hover-grow;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-}
-
-.links-below-content {
-  width: 100%;
-  float: left;
-  margin-top: 30px;
-  text-align: center;
 }
 
 .icon {
