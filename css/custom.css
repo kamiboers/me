@@ -406,9 +406,12 @@ body {
 }
 
 }
+
+
+
 /* mobile styling */
 
-@media (min-width: 700px) and (max-width: 1099px) {
+@media (max-width: 700px) {
 
 .sidebar {
   position: fixed;
@@ -423,17 +426,19 @@ body {
   padding-top: 5px;
 }
 
-.sidebar-title {
+
+.sidebar-links {
+  display: block;
+  width: 100%;
 }
 
 .sidebar-content {
-  font-size: 310%;
+  font-size: 210%;
 }
 
 .panel {
-  height: 95%;
+  height: 100%;
   width: 100%;
-  overflow-x: hidden;
   overflow-y: scroll;
   opacity: 0.97;
   margin-top: 8%;
@@ -445,23 +450,16 @@ body {
   text-align: center;
 }
 
-/* about panel content - intermediate */
-
-#panel-inner-about {
-  text-align: center;
-  padding: 20px 40px;
-}
+/* about panel content - mobile */
 
 .panel-narrow-column {
-  width: 90%;
-  float: left;
-  padding: 15px;
+  width: 100%;
+  /*float: left;*/
 }
 
 .panel-wide-column {
-  width: 90%;
-  float: left;
-  padding: 25px;
+  width: 100%;
+  /*float: left;*/
 }
 
 .headshot {
@@ -487,18 +485,14 @@ body {
   font-size: 24px;
   margin: 20px 25px 10px 25px;
   line-height: 125%;
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
-/* code panel content - intermediate */
+/* code panel content - mobile */
 
 #panel-inner-code {
   text-align: center;
-  padding: 20px 40px;
-}
-
-#panel-code {
-  padding: 20px;
+  padding-top: 35px;
 }
 
 .project-card {
@@ -506,28 +500,27 @@ body {
   width: 90%;
   margin: 10px 20px;
   float: left;
-  padding: 10px;
   display: block;
 }
 
 .project-links {
-    width: 30%;
-    border: .5px solid gray;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 160%;
+  width: 90%;
+  border: .5px solid gray;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 160%;
 }
 
 .project-description {
-  width: 65%;
+  width: 90%;
   margin: 15px auto;
   font-size: 22px;
   font-weight: 100;
   line-height: 120%;
-  text-align: justify;
+  text-align: left;
 }
 
 .project-image {
@@ -543,7 +536,7 @@ body {
   width: 70%;
 }
 
-/* contact panel content - intermediate */
+/* contact panel content - mobile */
 
 #panel-inner-contact {
   text-align: center;
@@ -554,7 +547,6 @@ body {
 }
 
 }
-
 
 
 
